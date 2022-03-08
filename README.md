@@ -19,7 +19,7 @@ This is a random collection of questions and answers I've collected about runnin
 - [How do I debug a CrashLoopBackoff pod?](#how-do-i-debug-a-crashloopbackoff-pod)
 - [How do I debug a ContainerCreating pod?](#how-do-i-debug-a-containercreating-pod)
 - [What is a DaemonSet?](#what-is-a-daemonset)
-- [What is a PetSet or StatefulSet?](#what-is-a-petset-or-statefulset)
+- [What is a StatefulSet?](#what-is-a-statefulset)
 - [What is an Ingress Controller?](#what-is-an-ingress-controller)
 - [Why do I see 504 errors from my Ingress during deploys?](#why-do-i-see-504-errors-from-my-ingress-during-deploys)
 - [How does a Kubernetes Service work?](#how-does-a-kubernetes-service-work)
@@ -148,13 +148,11 @@ A DaemonSet is a set of pods that is run only once on a host. It's used for host
 
 Learn more: http://kubernetes.io/docs/admin/daemons/
 
-## What is a PetSet or StatefulSet?
+## What is a StatefulSet?
 
-In a regular Deployment all the instances of a pod are exactly the same, they are indistinguishable and are thus sometimes referred to as "cattle", these are typically stateless applications that can be easily scaled up and down. In a PetSet, each pod is unique and has an identity that needs to be maintained. This is commonly used for more stateful applications like databases.
+In a regular Deployment all the instances of a pod are exactly the same, they are indistinguishable and are thus sometimes referred to as "cattle", these are typically stateless applications that can be easily scaled up and down. In a StatefuleSet, each pod is unique and has an identity that needs to be maintained. This is commonly used for more stateful applications like databases.
 
-Learn more: http://kubernetes.io/docs/user-guide/petset/
-
-In 1.5, PetSets have been renamed to Stateful Sets
+In v1.5, `PetSets` have been renamed to `StatefulSets`
 
 Learn more: http://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/
 
